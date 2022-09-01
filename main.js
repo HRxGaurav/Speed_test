@@ -1,8 +1,15 @@
+//   const imageAddr = new Image();
+//   imageAddr.src ="http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg" ;
 
+  const imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg" ;
+    
 
-  var imageAddr =
-    "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg";
   var downloadSize = 4995374; //bytes
+
+//   imageAddr.setAttribute('referrerpolicy' , 'no-referrer');
+//   imageAddr.referrerPolicy = 'no-referrer';
+//   imageAddr.crossOrigin= 'anonymous';
+// console.log(imageAddr);
 
   function ShowProgressMessage(msg) {
     if (console) {
@@ -36,6 +43,9 @@
   function MeasureConnectionSpeed() {
     var startTime, endTime;
     var download = new Image();
+
+    download.setAttribute('referrerpolicy' , 'no-referrer');
+    // download.referrerPolicy = 'no-referrer';
     download.onload = function () {
       endTime = new Date().getTime();
       showResults();
